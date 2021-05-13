@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Work Sans Regular';
+  src: url("../fonts/WorkSans-Regular.ttf");
+  src: url("../fonts/WorkSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/WorkSans-Regular-webfont.woff") format("woff"), url("../fonts/WorkSans-Regular-webfont.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("../fonts/WorkSans-Medium.ttf");
+  src: url("../fonts/WorkSans-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/WorkSans-Medium-webfont.woff") format("woff"), url("../fonts/WorkSans-Medium-webfont.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'HK Grotesk Bold Legacy';
+  src: url("../fonts/HKGrotesk-BoldLegacy.otf");
+  src: url("../fonts/HKGrotesk-BoldLegacy-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/HKGrotesk-BoldLegacy-webfont.woff") format("woff"), url("../fonts/HKGrotesk-BoldLegacy-webfont.ttf") format("truetype"); }
+
+:root {
+  --primary: #141630;
+  --primary-yellow: #EF7D3F;
+  --secondary: #FFFFFF;
+  --primary-bg:linear-gradient(87deg, rgba(20,22,48,1) 0%, rgba(31,35,80,1) 100%);
+  --btn-primary-bg:linear-gradient(0deg, rgba(31,35,80,1) 0%, rgba(20,22,48,1) 100%);
+  --btn-secondary-bg:linear-gradient(0deg, rgba(225,91,17,1) 0%, rgba(235,152,69,1) 54%, rgba(239,125,63,1) 100%); }
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  letter-spacing: -.2px; }
+
+select::-ms-expand {
+  display: none; }
+
+select:focus::-ms-value {
+  background: none;
+  color: #9b9b9b; }
+
+html,
+body {
+  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  background: #141630;
+  background: var(--primary-bg);
+  font-size: 1.4rem;
+  color: var(--secondary); }
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto; }
+
+header {
+  color: var(--primary);
+  font-size: 1.4rem; }
+
+.heading {
+  font-family: "HK Grotesk Bold Legacy", Helvetica, Arial, sans-serif; }
+  .heading--h1 {
+    font-size: 5.2rem; }
+  .heading--h2 {
+    font-size: 2.8rem; }
+  .heading--h3 {
+    font-size: 2.2rem; }
+  .heading--h4 {
+    font-size: 1.8rem; }
+  .heading--h5 {
+    font-size: 1.6rem; }
+  .heading--h6 {
+    font-size: 1.4rem; }
+
+.body {
+  font-family: "Work Sans", Helvetica, Arial, sans-serif; }
+  .body--text-1 {
+    font-size: 1.6rem; }
+  .body--text-2 {
+    font-size: 1.4rem; }
+  .body--text-3 {
+    font-family: "Work Sans Regular", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem; }

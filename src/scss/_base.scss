@@ -1,0 +1,30 @@
+html {
+    font-size: 62.5%; // 10/16
+    min-height: 100%;
+    letter-spacing: -.2px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:focus::-ms-value {
+    background: none;
+    color: #9b9b9b;
+}
+
+html,
+body {
+    font-family: $Work-Sans;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: rgb(20,22,48);
+    background: var(--primary-bg);
+    font-size: $default-size;
+    color: var(--secondary);
+}

@@ -1,0 +1,37 @@
+.heading {
+	font-family: $HKGrotesk-BoldLegacy;
+
+	&--h1 {
+		font-size: 5.2rem;
+	}
+	&--h2 {
+		font-size: 2.8rem;
+	}
+	&--h3 {
+		font-size: 2.2rem;
+	}
+	&--h4 {
+		font-size: 1.8rem;
+	}
+	&--h5 {
+		font-size: 1.6rem;
+	}
+	&--h6 {
+		font-size: 1.4rem;
+	}
+}
+
+.body {
+	font-family: $Work-Sans;
+
+	&--text-1 {
+		font-size: 1.6rem;
+	}
+	&--text-2 {
+		font-size: 1.4rem;
+	}
+	&--text-3 {
+		font-family: $Work-Sans-Regular;
+		font-size: 1.4rem;
+	}
+} 
