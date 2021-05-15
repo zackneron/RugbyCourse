@@ -28,3 +28,16 @@ body {
     font-size: $default-size;
     color: var(--secondary);
 }
+
+a,
+button {
+    outline: none;
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+
+img, video {
+    max-width: inherit;
+}

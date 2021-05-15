@@ -1,0 +1,17 @@
+.breadcrumb {
+	@include md {
+		margin-top: 7rem;
+	}
+	&__item {
+		display: inline-block;
+		position: relative;
+		&:not(:first-child) {
+			margin-left: 2.5rem;
+		}
+		&:not(:first-child):before {
+			content: '/';
+			position: absolute;
+			left: -2rem;
+		}
+	}
+}

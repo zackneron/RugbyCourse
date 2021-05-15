@@ -1,0 +1,64 @@
+@import 'variables';
+.btn {
+	color: var(--secondary);
+	padding: 8px 2.4rem 7px;
+    border-top-left-radius: 2.8rem;
+    border-top-right-radius: 2.8rem;
+    border-bottom-left-radius: 2.8rem;
+    border-bottom-right-radius: 2.8rem;
+    line-height: 1rem;
+    transition: all 3s linear;
+
+    &:hover,
+    &:focus {
+    	color: var(--secondary);
+    	outline: 0;
+    }
+
+    &-outline {
+    	background-color: transparent;
+    	border: 1px solid var(--secondary);
+    }
+	&-primary {
+		background: var(--btn-primary);
+		border: none;
+		&:hover,
+		&:focus {
+			background: var(--btn-secondary);
+		}
+
+		&.btn-outline {
+			border: 1px solid transparent;
+			&:hover,
+			&:focus {
+				background-color: transparent;
+    			border: 1px solid var(--secondary);
+			}
+		}
+	}
+    &-secondary {
+		background: var(--btn-secondary);
+		&:hover,
+		&:focus {
+			background: var(--btn-primary);
+		}
+	}
+	&-secondary-white {
+		color: var(--primary);
+		background: var(--secondary);
+	}
+
+	&--custom {
+		padding-top: 19px;
+	    padding-bottom: 18px;
+	    font-size: 16px;
+	    line-height: 19px;
+	}
+
+	&--lg {
+	    min-width: 187px;
+	}
+	&--xl {
+	    min-width: 246px;
+	}
+}

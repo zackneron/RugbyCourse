@@ -23,9 +23,29 @@ $HKGrotesk-BoldLegacy:'HK Grotesk Bold Legacy', Helvetica, Arial, sans-serif;
 
 :root {
     --primary: #141630;
-    --primary-yellow: #EF7D3F;
+    --primary-orange: #EF7D3F;
     --secondary: #FFFFFF;
+    --secondary-gray: #141630;
     --primary-bg:linear-gradient(87deg, rgba(20,22,48,1) 0%, rgba(31,35,80,1) 100%);
-    --btn-primary-bg:linear-gradient(0deg, rgba(31,35,80,1) 0%, rgba(20,22,48,1) 100%);
-    --btn-secondary-bg:linear-gradient(0deg, rgba(225,91,17,1) 0%, rgba(235,152,69,1) 54%, rgba(239,125,63,1) 100%);
+    --btn-primary:linear-gradient(0deg, rgba(225,91,17,1) 0%, rgba(235,152,69,1) 54%, rgba(239,125,63,1) 100%);
+    --btn-secondary:linear-gradient(0deg, rgba(31,35,80,1) 0%, rgba(20,22,48,1) 100%);
+}
+
+$white-blue: rgba(255,255,255,0.15);
+
+.u-text-o-5 {
+    color: var(--secondary-gray);
+    opacity: .5;
+}
+.u-text-o-6 {
+    color: var(--secondary);
+    opacity: .6;
+}
+.u-text-o-8 {
+    color: var(--secondary);
+    opacity: .8;
+}
+
+.mt-47 {
+    margin-top: 4.7rem;
 }

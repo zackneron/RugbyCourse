@@ -1,0 +1,48 @@
+.accordion {
+	@include border-radius;
+	&-header {
+		
+	}
+	&-body {
+		color: var(--primary);
+		padding: 0;
+	}
+	&-button {
+		font-size: inherit;
+		font-family: $HKGrotesk-BoldLegacy;
+		padding: 0;
+		margin-bottom: 2.5rem;
+
+		&:hover,
+		&:focus {
+			color: var(--primary);
+			border-color: transparent;
+    		outline: 0;
+    		box-shadow: none;
+		}
+		&::after {
+		    background-image: url('./../../src/images/class_details_arrow_up.png');
+		}
+    	&:not(.collapsed) {
+    		color: var(--primary);
+    		background-color: transparent;
+    		box-shadow: none;
+
+    		&::after {
+			    background-image: url("./../../src/images/class_details_arrow_up.png");
+			}
+    	}
+    	&.collapsed {
+    		margin-bottom: 0;
+    	}
+	}
+
+	&-item {
+		padding: 2.6rem 3.2rem 2.3rem;
+		&:not(:last-child){
+			border: 0;
+    		border-bottom: 1px solid;
+			border-color: var(--primary);
+		}
+	}
+}

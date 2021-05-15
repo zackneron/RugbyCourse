@@ -1,0 +1,17 @@
+.media {
+	@include border-radius;
+	&__play {
+		position: relative;
+		min-height: 21.3rem;
+		//max-width: 37.4rem;
+	}
+	&__video {
+		width: 100%;
+	}
+	&__description {
+		background: $white-blue;
+		padding: 26px 21px 27px 24px;
+		line-height: 16px;
+		letter-spacing: 0;
+	}
+}

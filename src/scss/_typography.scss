@@ -3,21 +3,32 @@
 
 	&--h1 {
 		font-size: 5.2rem;
+		line-height: 66px;
 	}
 	&--h2 {
 		font-size: 2.8rem;
+		line-height: 33px;
 	}
 	&--h3 {
 		font-size: 2.2rem;
+		line-height: 27px;
 	}
 	&--h4 {
 		font-size: 1.8rem;
+		line-height: 21px;
 	}
 	&--h5 {
 		font-size: 1.6rem;
+		line-height: 19px;
 	}
 	&--h6 {
 		font-size: 1.4rem;
+		line-height: 16px;
+	}
+
+	&--subheading {
+		font-size: 2rem;
+		line-height: 24px;
 	}
 }
 
@@ -26,12 +37,15 @@
 
 	&--text-1 {
 		font-size: 1.6rem;
+		line-height: 19px;
 	}
 	&--text-2 {
 		font-size: 1.4rem;
+		line-height: 16px;
 	}
 	&--text-3 {
 		font-family: $Work-Sans-Regular;
 		font-size: 1.4rem;
+		line-height: 16px;
 	}
 } 

@@ -1,0 +1,57 @@
+.navbar {
+	padding: 1.9rem 2rem 1.8rem;
+	@include md {
+		padding: 15px 0 13px;
+	}
+
+	.logo {
+		background: url('./../../src/images/mobile_header_logo.png') no-repeat;
+		background-size: contain;
+	    height: 5.4rem;
+	    width: 5rem;
+	    display: inline-block;
+		text-indent: -9999px;
+
+		@include md {
+			background: url('./../../src/images/header_rugby_master_logo.png') no-repeat;
+			background-size: contain;
+			height: 7.2rem;
+	    	width: 7.2rem;
+		}
+	}
+}
+
+.navbar--mobile {
+	&-menu {
+		padding-top: 3rem;
+	    top: 0;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    background:  var(--primary-bg);
+	    height: 100%;
+	  	width: 0;
+	  	position: fixed;
+	  	z-index: 1;
+	  	overflow-x: hidden;
+	  	transition: 0.5s;
+
+	  	.logo {
+			background: url('./../../src/images/mobile_nav_logo.png') no-repeat;
+			background-size: contain;
+		    height: 5.4rem;
+		    width: 5rem;
+		}
+
+	    .navbar__logo {
+	    	margin-bottom: 80px;
+	    }
+
+	    &__item {
+	    	font-size: 2rem;
+	    	margin-bottom: 3.7rem;
+	    	color: var(--primary-orange);
+	    }
+	}
+	
+}
