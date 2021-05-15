@@ -1,0 +1,65 @@
+.fa {
+    display: inline-block;
+    background: center center no-repeat;
+    background-size: contain;
+}
+
+.fa-right {
+    display: block;
+    float: right;
+}
+
+.fa-left {
+    display: block;
+    float: left;
+}
+
+
+/*BACK ARROW*/
+.fa-search {
+    width: 2.3rem;
+    height: 2.3rem;
+    background-image: url('./../../src/images/gg-search.png');
+}
+
+.fa-cart {
+    width: 2.4rem;
+    height: 2.3rem;
+    background-image: url('./../../src/images/header_cart_icon.png');
+}
+
+.fa-cart-orange {
+    width: 1.8rem;
+    height: 1.7rem;
+    background-image: url('./../../src/images/mobile_nav_cart_icon.png');
+}
+
+.fa-close {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('./../../src/images/mobile_nav_close_icon.png');
+}
+
+.fa-burger {
+    width: 3.6rem;
+    height: 3.6rem;
+    background-image: url('./../../src/images/mobile_menu_icon.png');
+}
+
+.fa-left-arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url('./../../src/images/browse_filters_left_arrow-arrow_carrot-left.png');
+}
+
+.fa-home-rugby-masters-logo {
+    width: 2.7rem;
+    height: 2.7rem;
+    background-image: url('./../../src/images/class_details_home_rugby_masters_logo.png');
+}
+
+.fa-info {
+    width: 1.7rem;
+    height: 1.7rem;
+    background-image: url('./../../src/images/i_icon-ic_info.png');
+}
