@@ -3,147 +3,254 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="lib/tailwind.css">
+	<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/css/tailwind.css">
+	<link rel="stylesheet" href="lib/css/fa-icons.css">
 	<link rel="stylesheet" href="dist/css/defaults.css">
 	<title>Rugby Courses/Classes</title>
 </head>
 <body>
-	<header>
+	<header class="bg-white">
 		<div class="container">
-			<div class="navbar flex justify-between bg-white">
-				<div class="navbar__logo">
-                    <a href="#">logo</a>
-					<a href="#">Browse Classes</a>
+			<div class="navbar navbar--mobile flex justify-between items-center">
+				<div class="navbar__logo flex justify-between items-center">
+                    <a class="logo" href="#">logo</a>
+					<a class="body body--text-1 ml-12 hidden md:block" href="#">Browse Classes</a>
+					<a class="flex justify-between items-center ml-12 block md:hidden" href="#">
+						<i class="fa fa-search mr-3"></i>Search
+					</a>
 				</div>
-				<div class="navbar__menu flex justify-around">
-					<span>Search</span>
-                    <span>Cart</span>
-                    <a href="#">Log in</a>
-                    <button class="btn">Sign Up</button>
+				<div class="navbar__menu flex justify-around items-center">
+					<a class="flex justify-between items-center mr-12 hidden md:block" href="#">
+						<i class="fa fa-search mr-3"></i>Search
+					</a>
+					<a class="flex justify-between items-center mr-12 hidden md:block" href="#">
+						<i class="fa fa-cart mr-3"></i>Cart
+					</a>
+                    <a class="hidden md:block mr-6" href="#">Log in</a>
+                    <button class="btn btn-primary hidden md:block">Sign Up</button>
+                    <button class="md:hidden" role="button" id="js-openMenu">
+                    	<i class="fa fa-burger"></i>
+                    </button>
 				</div>
+			</div>
+		</div>
+
+		<div class="navbar--mobile-menu md:hidden" id="js-mobileMenu">
+			<div class="navbar__logo flex justify-between items-center px-12">
+                <a class="logo" href="#">logo</a>
+				<a class="body body--text-1 ml-12" href="#" id="js-closeMenu">
+					<i class="fa fa-close"></i>
+				</a>
+			</div>
+			<div class="navbar--mobile-menu__menu flex flex-col items-center">
+				<a class="body body--text-1 navbar--mobile-menu__item" href="#">Browse Classes</a>
+				<a class="body body--text-1 navbar--mobile-menu__item flex justify-between items-center" href="#">
+					<i class="fa fa-cart-orange mr-3"></i>Cart
+				</a>
+                <a class="body body--text-1 navbar--mobile-menu__item" href="#">Log in</a>
+                <button class="btn btn--xl btn--custom btn-primary btn-outline" role="button">Get Started</button>
 			</div>
 		</div>
 	</header>
 	<!-- breadcrums -->
-	<section>
+	<section class="p-10">
 		<div class="container">
-			<div class="breadcrums"></div>
-			<ul class="breadcrums__list">
-				<li><a href="#">logo</a></li>
-				<li><a href="#">Browse Classes</a></li>
-				<li><a href="#">Basic Skills</a></li>
-				<li><a href="#">Rugby Basics</a></li>
-			</ul>
+			<div class="breadcrumb">
+				<a class="pt-16 flex items-center" href="#"> 
+					<i class="fa fa-left-arrow"></i>
+					Back
+				</a>
+				<ul class="breadcrumb__list hidden flex items-center md:block">
+					<li class="breadcrumb__item">
+						<a href="#">
+							<i class="fa fa-home-rugby-masters-logo"></i>
+						</a>
+					</li>
+					<li class="breadcrumb__item"><a href="#">Browse Classes</a></li>
+					<li class="breadcrumb__item"><a href="#">Basic Skills</a></li>
+					<li class="breadcrumb__item"><a href="#">Rugby Basics</a></li>
+				</ul>
+			</div>
+			
 		</div>
 	</section>
 	<!-- cart -->
-	<section>
+	<section class="p-10">
 		<div class="container">
-			<div class="cart flex justify-between">
-				<div class="cart__thumbnail thumbnail">
-					<div class="thumbnail__img"></div>
-					<div class="thumbnail__description">
-						<h2>title</h2>
-						<p>subtitle</p>
-						<span>text</span>
-						<div class="action">
-							<button>button</button>
-							<i>icon</i>
+			<div class="cart flex justify-between mt-20 mb-24">
+				<div class="cart__info">
+					<div class="cart__thumb">
+						<img src="src/images/class_overview_circle_image@1x.png" class="cart__img" alt="Rugby Basics">
+					</div>
+					<div class="cart__description mt-10">
+						<h2 class="heading heading--h2">Rugby Basics</h2>
+						<p class="heading heading--subheading mt-6">Taught by Cobus Reinach</p>
+						<span class="u-text-o-8 mt-6 block uppercase">6 Lessons - 3 hours, 27mins</span>
+						<div class="flex items-center mt-10">
+							<button class="btn btn-secondary-white mr-5">2 Snapshots Available</button>
+							<i class="fa fa-info"></i>
 						</div>
 					</div>
 				</div>
-				<div class="cart__add-cart">
-					<div class="thumbnail__img">
-						<span>R155</span>
-						<button>button</button>
+				<div class="cart__add text-right">
+					<div class="cart__add-cart">
+						<span class="heading heading--subheading block mb-5">R1550.00</span>
+						<button class="btn btn--lg btn--custom btn-primary btn-outline">Add to Cart</button>
 					</div>
-					<div class="thumbnail__description">
-						<button>button 1</button>
-						<button>button 2</button>
-						<button>button 3</button>
+					<div class="cart__add-skills flex items-center hidden md:block">
+						<button class="btn btn-outline  mr-5">Basic Skills</button>
+						<button class="btn btn-outline  mr-5">Coaching</button>
+						<button class="btn btn-outline">Techniques</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- video -->
-	<section>
+	<section class="p-10">
 		<div class="container">
-			<div class="content flex">
-				<div class="cart__thumbnail thumbnail border-2 md:flex-auto">
-					<div class="thumbnail__img">VIDEO</div>
-					<div class="thumbnail__description">
-						PARAGRAPH
+			<div class="content flex flex-col md:flex-row">
+				<div class="media md:flex-auto">
+					<div class="media__play">
+						<video class="media__video" id='media-video' controls>
+				            <source src='src/images/rugby.mp4' type='video/mp4'>
+				            <source src='rugby.webm' type='video/webm'>
+				         </video>
+				         <div id='media-controls'></div>
+					</div>
+					<div class="media__description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin dolor sit amet, consectetur adipiscing elit. Quisque condimentum dui eget lacinia pellentesque. Nulla rhoncus at est ac sollicitudin. Sed quis egestas sapien. Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
 					</div>
 				</div>
-				<div class="cart__add-cart md:flex-auto">
-					<div class="accordion">
-						accordion here
-					</div>
+				<div class="accordion mt-20 md:mt-0" id="accordionExample">
+				  <div class="accordion-item">
+				    <h5 class="heading heading--h5 accordion-header" id="headingOne">
+				      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				        1. Introduction
+				      </button>
+				    </h5>
+				    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+				      <div class="accordion-body">
+				        Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingTwo">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				        2. On-Field Decision Making
+				      </button>
+				    </h2>
+				    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+				      <div class="accordion-body">
+				        Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="headingThree">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				        3. Passing
+				      </button>
+				      <button class="btn btn-secondary">Available as Snapshot</button>
+				    </h2>
+				    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+				      <div class="accordion-body">
+				        Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+				      </div>
+				    </div>
+				  </div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- card -->
-	<section>
+	<section class="p-10">
 		<div class="container">
-			<div class="card flex">
-				<div class="card__info md:flex-auto">
-					<div>photo</div>
-					<div>
-						<h3 class="heading heading--h3">title</h3>
-						<p class="body body--text-1">subtitle</p>
+			<div class="cards flex flex-col md:flex-row">
+				<div class="cards__info flex flex-row items-center">
+					<div class="cards__thumb">
+						<img src="src/images/Coach_image.png" class="cards__img" alt="Player Profil Picture">
+					</div>
+					<div class="cards__title">
+						<h3 class="heading heading--h3 mb-2.5">Cobus Reinach</h3>
+						<p class="body body--text-1 uppercase u-text-o-8">Professional Rugby Union Player</p>
 					</div>
 				</div>
-				<div class="card__content md:flex-auto">
-					<p class="body body--text-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, labore sapiente repellat rerum corporis, ab soluta voluptatum magnam explicabo pariatur, optio. Alias rerum iure aliquam eos repellat, optio, laudantium quaerat.</p>
+				<div class="cards__content md:flex-auto">
+					<p class="body body--text-2 u-text-o-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin dolor sit amet, consectetur adipiscing elit. Quisque condimentum dui eget lacinia pellentesque. Nulla rhoncus at est ac sollicitudin. Sed quis egestas sapien. Nam dignissim.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- ready to go -->
-	<section class="ready-to-go-section">
+	<section class="ready-to-go">
 		<div class="container">
-			<div class="card flex">
-				<div class="card__info md:flex-auto">
+			<div class="ready-to-go__block flex flex-col md:flex-row text-center md: text-left">
+				<div class="mt-47">
 					<h1 class="heading heading--h1">Ready to go?</h1>
-					<h3 class="heading heading--h3">Purchase this class in just a few clicks!</h3>
+					<h3 class="ready-to-go__subheading">Purchase this class in just a few clicks!</h3>
 				</div>
-				<div class="card__content md:flex-auto">
-					<button class="btn btn-primary">Add to Cart</button>
+				<div class="ready-to-go__cta">
+					<button class="btn btn-primary btn--custom btn--xl">Add to Cart</button>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- snapshot -->
-	<section>
+	<section class="p-10">
 		<div class="container">
-			<div class="card flex">
-				<div class="card__info md:flex-auto">
-					<h2 class="heading heading--h2">Snapshots</h2>
-					<p class="body body--text-1">Purchase individual lessons from this Master Class</p>
-				</div>
+			<div class="snapshot">
+				<h2 class="heading heading--h2 mb-7">Snapshots</h2>
+				<p class="body body--text-1 u-text-o-8 mb-10">Purchase individual lessons from this Master Class</p>
 			</div>
 		</div>
+	</section>
+	<section class="card-block px-10">
 		<div class="container">
-			<div class="cart flex justify-between">
-				<div class="cart__thumbnail thumbnail">
-					<div class="thumbnail__img">
-						<img src="" alt="">
-						<span>35:02</span>
+			<div class="card-wrap">
+				<div class="card">
+					<div class="card-img">
+						<img src="src/images/home_snapshots_image.png" class="card-img-top" alt="...">
+						<span class="card-time">35:02</span>
 					</div>
-					<div class="thumbnail__description">
-						<h5 class="heading heading--h5">Tackling and Game Tactics Lorem ipsum dolor Game Tactics Lorem ipsum dolor with Cobus Reinach</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin…</p>
-						<div class="action">
-							<span>R450.00</span>
-							<a href="#">basket icon</a>
-						</div>
+				  
+				  <div class="card-body">
+				    <h5 class="heading heading--h5 card-title">Tackling and Game Tactics Lorem ipsum dolor Game Tactics Lorem ipsum dolor with Cobus Reinach</h5>
+				    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin…</p>
+				    <div class="flex justify-between items-center">
+				    	<h4 class="heading heading--h4">R450.00</h4>
+				    	<a href="#" class="">
+				    		<i class="fa fa-add-cart"></i>
+				    	</a>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card">
+					<div class="card-img">
+						<img src="src/images/home_snapshots_image.png" class="card-img-top" alt="...">
+						<span class="card-time">35:02</span>
 					</div>
+				  
+				  <div class="card-body">
+				    <h5 class="heading heading--h5 card-title">Tackling and Game Tactics Lorem ipsum dolor Game Tactics Lorem ipsum dolor with Cobus Reinach</h5>
+				    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin…</p>
+				    <div class="flex justify-between items-center">
+				    	<h4 class="heading heading--h4">R450.00</h4>
+				    	<a href="#" class="">
+				    		<i class="fa fa-add-cart"></i>
+				    	</a>
+				    </div>
+				  </div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<a href="#" class="back-top">
+		<img src="src/images/Mobile_back_to_top_icon.png" class="card-img-top" alt="...">
+	</a>
 	<!-- footer -->
 	<footer class="footer">
 		<div class="container">
@@ -174,5 +281,8 @@
 			<p>Copyright Rugby Masters 2020, All Rights Reserved.</p>
 		</div>
 	</footer>
+	<script src="lib/js/jquery.js"></script>
+	<script src="lib/js/bootstrap.min.js"></script>
+	<script src="src/js/script.js"></script>
 </body>
 </html>
