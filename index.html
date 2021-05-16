@@ -15,20 +15,20 @@
 			<div class="navbar navbar--mobile flex justify-between items-center">
 				<div class="navbar__logo flex justify-between items-center">
                     <a class="logo" href="#">logo</a>
-					<a class="body body--text-1 ml-12 hidden md:block" href="#">Browse Classes</a>
+					<a class="body body--text-1 ml-12 hidden md:flex" href="#">Browse Classes</a>
 					<a class="flex justify-between items-center ml-12 block md:hidden" href="#">
 						<i class="fa fa-search mr-3"></i>Search
 					</a>
 				</div>
 				<div class="navbar__menu flex justify-around items-center">
-					<a class="flex justify-between items-center mr-12 hidden md:block" href="#">
+					<a class="justify-between items-center mr-12 hidden md:flex" href="#">
 						<i class="fa fa-search mr-3"></i>Search
 					</a>
-					<a class="flex justify-between items-center mr-12 hidden md:block" href="#">
+					<a class="justify-between items-center mr-12 hidden md:flex" href="#">
 						<i class="fa fa-cart mr-3"></i>Cart
 					</a>
-                    <a class="hidden md:block mr-6" href="#">Log in</a>
-                    <button class="btn btn-primary hidden md:block">Sign Up</button>
+                    <a class="hidden md:flex mr-5" href="#">Log in</a>
+                    <button class="btn btn-primary btn--md body body--text-1 hidden md:block">Sign Up</button>
                     <button class="md:hidden" role="button" id="js-openMenu">
                     	<i class="fa fa-burger"></i>
                     </button>
@@ -54,14 +54,14 @@
 		</div>
 	</header>
 	<!-- breadcrums -->
-	<section class="p-10">
+	<section class="breadcrumb__block px-8">
 		<div class="container">
 			<div class="breadcrumb">
-				<a class="pt-16 flex items-center" href="#"> 
+				<a class="pt-16 flex items-center body body--text-1 md:hidden" href="#"> 
 					<i class="fa fa-left-arrow"></i>
 					Back
 				</a>
-				<ul class="breadcrumb__list hidden flex items-center md:block">
+				<ul class="breadcrumb__list hidden items-center md:flex">
 					<li class="breadcrumb__item">
 						<a href="#">
 							<i class="fa fa-home-rugby-masters-logo"></i>
@@ -76,29 +76,33 @@
 		</div>
 	</section>
 	<!-- cart -->
-	<section class="p-10">
+	<section class="cart__block px-8">
 		<div class="container">
-			<div class="cart flex justify-between mt-20 mb-24">
-				<div class="cart__info">
+			<div class="cart flex justify-between">
+				<div class="cart__info flex flex-col md:flex-row md:items-end">
 					<div class="cart__thumb">
 						<img src="src/images/class_overview_circle_image@1x.png" class="cart__img" alt="Rugby Basics">
 					</div>
-					<div class="cart__description mt-10">
+					<div class="cart__description mt-10 md:mt-0">
 						<h2 class="heading heading--h2">Rugby Basics</h2>
 						<p class="heading heading--subheading mt-6">Taught by Cobus Reinach</p>
 						<span class="u-text-o-8 mt-6 block uppercase">6 Lessons - 3 hours, 27mins</span>
-						<div class="flex items-center mt-10">
+						<div class="flex items-center mt-8">
 							<button class="btn btn-secondary-white mr-5">2 Snapshots Available</button>
-							<i class="fa fa-info"></i>
+							
+
+							<button type="button" class="" data-bs-toggle="tooltip" data-bs-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius erat blandit ex ornare egestas. Duis vel velit consectetur, dignissim elit luctus, sagittis enim. ">
+							  <i class="fa fa-info"></i>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="cart__add text-right">
-					<div class="cart__add-cart">
-						<span class="heading heading--subheading block mb-5">R1550.00</span>
+				<div class="cart__add text-right flex md:flex-col md:justify-between">
+					<div class="cart__add-cart  flex flex-col md:flex-row md:items-center md:justify-end">
+						<span class="cart__add-cart__price heading heading--subheading block">R1550.00</span>
 						<button class="btn btn--lg btn--custom btn-primary btn-outline">Add to Cart</button>
 					</div>
-					<div class="cart__add-skills flex items-center hidden md:block">
+					<div class="cart__add-skills items-center hidden md:flex">
 						<button class="btn btn-outline  mr-5">Basic Skills</button>
 						<button class="btn btn-outline  mr-5">Coaching</button>
 						<button class="btn btn-outline">Techniques</button>
@@ -108,54 +112,119 @@
 		</div>
 	</section>
 	<!-- video -->
-	<section class="p-10">
+	<section class="px-8">
 		<div class="container">
 			<div class="content flex flex-col md:flex-row">
 				<div class="media md:flex-auto">
-					<div class="media__play">
-						<video class="media__video" id='media-video' controls>
-				            <source src='src/images/rugby.mp4' type='video/mp4'>
-				            <source src='rugby.webm' type='video/webm'>
-				         </video>
-				         <div id='media-controls'></div>
+					<div class="media__play" id='media-player'>
+						<div class="relative">
+							<video class="media__video" id='media-video' controls>
+					            <source src='src/images/rugby.mp4' type='video/mp4'>
+					            <source src='rugby.webm' type='video/webm'>
+					         </video>
+					         <a class="media__play-btn" href="src/images/rugby.mp4">
+					         	<i class="fa fa-play"></i>
+					         </a>
+						</div>
+						
+				         <div class="media-controls" id='media-controls'>
+				         	<span class="progress__block">
+				         		<span class="progress__complete-level" id="diplay">0% Completed</span>
+				         		<progress id='progress-bar' min='0' max='100' value='0' style="width: 100%"></progress>
+				         	</span>
+				         	<div class="media-controls_icons flex items-center justify-between">
+				         		<div class="flex items-center">
+				         			<button id='play-pause-button' class='play mr-14' role="button">
+						         		<i class="fa fa-play-video" id="media-icon"></i> 
+						         	</button>
+						         	<button class='volume mr-6' role="button">
+										<i class="fa fa-volume"></i>
+									</button>
+									<span>0:00 / 35:02</span>
+				         		</div>
+				         		<div>
+				         			<button id='fullScreenBtn' class='mute' role="button">
+										<i class="fa fa-full_screen-video"></i>
+									</button>
+				         		</div>
+				         	</div>
+				         </div>
+				         
 					</div>
 					<div class="media__description">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin dolor sit amet, consectetur adipiscing elit. Quisque condimentum dui eget lacinia pellentesque. Nulla rhoncus at est ac sollicitudin. Sed quis egestas sapien. Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+						<p class="body body--text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin dolor sit amet, consectetur adipiscing elit. Quisque condimentum dui eget lacinia pellentesque. Nulla rhoncus at est ac sollicitudin. Sed quis egestas sapien. Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
 					</div>
 				</div>
-				<div class="accordion mt-20 md:mt-0" id="accordionExample">
+				<div class="accordion mt-20 md:mt-0" id="accordionDetails">
 				  <div class="accordion-item">
-				    <h5 class="heading heading--h5 accordion-header" id="headingOne">
-				      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				    <h5 class="heading heading--h5 accordion-header" id="introductionHeading">
+				      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#introduction" aria-expanded="true" aria-controls="introduction">
 				        1. Introduction
 				      </button>
 				    </h5>
-				    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+				    <div id="introduction" class="accordion-collapse collapse show" aria-labelledby="introductionHeading" data-bs-parent="#accordionDetails">
 				      <div class="accordion-body">
 				        Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 				      </div>
 				    </div>
 				  </div>
 				  <div class="accordion-item">
-				    <h2 class="accordion-header" id="headingTwo">
-				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				    <h2 class="accordion-header" id="OnFieldDecisionMakingHeading">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#OnFieldDecisionMaking" aria-expanded="false" aria-controls="OnFieldDecisionMaking">
 				        2. On-Field Decision Making
 				      </button>
 				    </h2>
-				    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+				    <div id="OnFieldDecisionMaking" class="accordion-collapse collapse" aria-labelledby="OnFieldDecisionMakingHeading" data-bs-parent="#accordionDetails">
 				      <div class="accordion-body">
 				        Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 				      </div>
 				    </div>
 				  </div>
 				  <div class="accordion-item">
-				    <h2 class="accordion-header" id="headingThree">
-				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				    <h2 class="accordion-header" id="passingHeading">
+				      <button class="accordion-button collapsed mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#passing" aria-expanded="false" aria-controls="passing">
 				        3. Passing
 				      </button>
-				      <button class="btn btn-secondary">Available as Snapshot</button>
+				      <button class="btn btn-secondary mb-3">Available as Snapshot</button>
 				    </h2>
-				    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+				    <div id="passing" class="accordion-collapse collapse" aria-labelledby="passingHeading" data-bs-parent="#accordionDetails">
+				      <div class="accordion-body">
+				        Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="kickingHeading">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kicking" aria-expanded="false" aria-controls="kicking">
+				        4. Kicking
+				      </button>
+				    </h2>
+				    <div id="kicking" class="accordion-collapse collapse" aria-labelledby="kickingHeading" data-bs-parent="#accordionDetails">
+				      <div class="accordion-body">
+				        Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="gamePrepAnalysationHeading">
+				      <button class="accordion-button collapsed mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#gamePrepAnalysation" aria-expanded="false" aria-controls="gamePrepAnalysation">
+				        5. Game Prep and Analysation
+				      </button>
+				      <button class="btn btn-secondary mb-3">Available as Snapshot</button>
+				    </h2>
+				    <div id="gamePrepAnalysation" class="accordion-collapse collapse" aria-labelledby="gamePrepAnalysationHeading" data-bs-parent="#accordionDetails">
+				      <div class="accordion-body">
+				        Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="accordion-item">
+				    <h2 class="accordion-header" id="tricksHeading">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tricks" aria-expanded="false" aria-controls="tricks">
+				        6. Tricks
+				      </button>
+				    </h2>
+				    <div id="tricks" class="accordion-collapse collapse" aria-labelledby="tricksHeading" data-bs-parent="#accordionDetails">
 				      <div class="accordion-body">
 				        Nam dignissim posuere rutrum. Nunc suscipit posuere felis eu maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 				      </div>
@@ -166,19 +235,19 @@
 		</div>
 	</section>
 	<!-- card -->
-	<section class="p-10">
+	<section class="cards__block px-8">
 		<div class="container">
 			<div class="cards flex flex-col md:flex-row">
-				<div class="cards__info flex flex-row items-center">
+				<div class="cards__info flex flex-row items-center md:flex-initial">
 					<div class="cards__thumb">
-						<img src="src/images/Coach_image.png" class="cards__img" alt="Player Profil Picture">
+						<img src="src/images/cobus_coach_image.png" class="cards__img" alt="Player Profil Picture">
 					</div>
 					<div class="cards__title">
 						<h3 class="heading heading--h3 mb-2.5">Cobus Reinach</h3>
 						<p class="body body--text-1 uppercase u-text-o-8">Professional Rugby Union Player</p>
 					</div>
 				</div>
-				<div class="cards__content md:flex-auto">
+				<div class="cards__content md:flex-1 flex items-center">
 					<p class="body body--text-2 u-text-o-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin dolor sit amet, consectetur adipiscing elit. Quisque condimentum dui eget lacinia pellentesque. Nulla rhoncus at est ac sollicitudin. Sed quis egestas sapien. Nam dignissim.</p>
 				</div>
 			</div>
@@ -187,8 +256,8 @@
 	<!-- ready to go -->
 	<section class="ready-to-go">
 		<div class="container">
-			<div class="ready-to-go__block flex flex-col md:flex-row text-center md: text-left">
-				<div class="mt-47">
+			<div class="ready-to-go__block flex flex-col md:flex-row md:items-center md:justify-around">
+				<div class="ready-to-go__content">
 					<h1 class="heading heading--h1">Ready to go?</h1>
 					<h3 class="ready-to-go__subheading">Purchase this class in just a few clicks!</h3>
 				</div>
@@ -199,15 +268,15 @@
 		</div>
 	</section>
 	<!-- snapshot -->
-	<section class="p-10">
+	<section class="px-8">
 		<div class="container">
 			<div class="snapshot">
-				<h2 class="heading heading--h2 mb-7">Snapshots</h2>
-				<p class="body body--text-1 u-text-o-8 mb-10">Purchase individual lessons from this Master Class</p>
+				<h2 class="heading heading--h2 mb-7 md:mb-10">Snapshots</h2>
+				<p class="body body--text-1 u-text-o-8 mb-10 md:mb-12">Purchase individual lessons from this Master Class</p>
 			</div>
 		</div>
 	</section>
-	<section class="card-block px-10">
+	<section class="card-block px-8">
 		<div class="container">
 			<div class="card-wrap">
 				<div class="card">
@@ -219,9 +288,9 @@
 				  <div class="card-body">
 				    <h5 class="heading heading--h5 card-title">Tackling and Game Tactics Lorem ipsum dolor Game Tactics Lorem ipsum dolor with Cobus Reinach</h5>
 				    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin…</p>
-				    <div class="flex justify-between items-center">
+				    <div class="flex justify-between items-center md:justify-end">
 				    	<h4 class="heading heading--h4">R450.00</h4>
-				    	<a href="#" class="">
+				    	<a href="#" class="card-basket">
 				    		<i class="fa fa-add-cart"></i>
 				    	</a>
 				    </div>
@@ -237,9 +306,9 @@
 				  <div class="card-body">
 				    <h5 class="heading heading--h5 card-title">Tackling and Game Tactics Lorem ipsum dolor Game Tactics Lorem ipsum dolor with Cobus Reinach</h5>
 				    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat in elit eget malesuada. Aenean laoreet sem vel sollicitudin…</p>
-				    <div class="flex justify-between items-center">
+				    <div class="flex justify-between items-center md:justify-end">
 				    	<h4 class="heading heading--h4">R450.00</h4>
-				    	<a href="#" class="">
+				    	<a href="#" class="card-basket">
 				    		<i class="fa fa-add-cart"></i>
 				    	</a>
 				    </div>
@@ -249,29 +318,37 @@
 		</div>
 	</section>
 	<a href="#" class="back-top">
-		<img src="src/images/Mobile_back_to_top_icon.png" class="card-img-top" alt="...">
+		<img src="src/images/Mobile_back_to_top_icon.png" class="card-img-top" alt="Back to Top">
 	</a>
 	<!-- footer -->
 	<footer class="footer">
 		<div class="container">
-			<div class="footer__container flex justify-between">
-				<div class="footer__menu">
-					<div class="logo"></div>
+			<div class="footer__container flex justify-between flex-col md:flex-row">
+				<div class="footer__menu mb-16 md:mb-0 flex justify-between flex-col md:flex-row items-center">
+					<div class="footer__logo">
+						<img src="src/images/footer_rugby_masters_logo.png" class="footer__logo-img" alt="Back to Top">
+					</div>
 					<ul class="breadcrums__list">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Browse Classes</a></li>
-						<li><a href="#">Create an Account</a></li>
-						<li><a href="#">Terms & Conditions</a></li>
+						<li class="mb-8 body body--text-1"><a href="#">Home</a></li>
+						<li class="mb-8 body body--text-1"><a href="#">Browse Classes</a></li>
+						<li class="mb-8 body body--text-1"><a href="#">Create an Account</a></li>
+						<li class="mb-8 body body--text-1"><a href="#">Terms & Conditions</a></li>
 					</ul>
 				</div>
 				<div class="footer__social">
-					<h4 class="heading heading--h4">Get in touch</h4>
-					<ul class="breadcrums__list">
-						<li><a href="#">logo</a></li>
-						<li><a href="#">Browse Classes</a></li>
-						<li><a href="#">Basic Skills</a></li>
+					<h4 class="heading heading--h4 mb-9 md:mb-6">Get in touch</h4>
+					<ul class="breadcrums__list flex justify-center mb-9">
+						<li class="mr-11"><a href="#">
+							<i class="fa fa-facebook"></i>
+						</a></li>
+						<li class="mr-11"><a href="#">
+							<i class="fa fa-instagram"></i>
+						</a></li>
+						<li><a href="#">
+							<i class="fa fa-twitter"></i>
+						</a></li>
 					</ul>
-					<h5 class="heading heading--h5">
+					<h5 class="heading heading--h5 mb-16">
 						<a href="mailto:hello@rugbymasters.co.za">hello@rugbymasters.co.za</a>
 					</h5>
 				</div>
@@ -282,6 +359,7 @@
 		</div>
 	</footer>
 	<script src="lib/js/jquery.js"></script>
+	<script src="lib/js/popper.min.js"></script>
 	<script src="lib/js/bootstrap.min.js"></script>
 	<script src="src/js/script.js"></script>
 </body>
