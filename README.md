@@ -1,5 +1,9 @@
 ## Rugby Courses ReadMe
 
+### Run project
+
+Use ** gulp sync ** to load the page/project
+
 ### Duration of the assessment
 
 The assessment took me 3 days to complete. I started with the mobile first approach which took most of my time in general. 
