@@ -17,7 +17,6 @@
 	let mediaPlayer = document.getElementById('media-video');
 
 	function initialiseMediaPlayer() {
-	   mediaPlayer = document.getElementById('media-video');
 	   mediaPlayer.controls = false;
 	}
 
