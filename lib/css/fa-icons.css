@@ -14,8 +14,6 @@
     float: left;
 }
 
-
-/*BACK ARROW*/
 .fa-search {
     width: 2.3rem;
     height: 2.3rem;
@@ -68,4 +66,51 @@
     width: 1.7rem;
     height: 1.7rem;
     background-image: url('./../../src/images/i_icon-ic_info.png');
+}
+
+.fa-facebook {
+    width: 4.2rem;
+    height: 4.2rem;
+    background-image: url('./../../src/images/footer_facebook_icon.png');
+}
+
+.fa-instagram {
+    width: 4.2rem;
+    height: 4.2rem;
+    background-image: url('./../../src/images/footer_instagram_icon.png');
+}
+
+.fa-twitter {
+    width: 4.2rem;
+    height: 4.2rem;
+    background-image: url('./../../src/images/footer_twitter_icon.png');
+}
+
+.fa-play {
+    width: 5.9rem;
+    height: 5.9rem;
+    background-image: url('./../../src/images/mobile_video_play_button.png');
+}
+
+.fa-play-video {
+    width: 2rem;
+    height: 1.9rem;
+    background-image: url('./../../src/images/class_details_video_play_icon.png');
+}
+.fa-pause-video {
+    width: 2rem;
+    height: 1.9rem;
+    background-image: url('./../../src/images/class_details_video_pause_icon.png');
+}
+
+.fa-volume {
+    width: 2.7rem;
+    height: 2.7rem;
+    background-image: url('./../../src/images/class_details_video_volume_icon.png');
+}
+
+.fa-full_screen-video {
+    width: 1.9rem;
+    height: 1.6rem;
+    background-image: url('./../../src/images/video_full_screen_icon-ic_fullscreen.png');
 }
