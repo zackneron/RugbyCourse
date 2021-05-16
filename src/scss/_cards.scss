@@ -2,15 +2,33 @@
 	background: $white-blue;
 	border-radius: .6rem;
 	padding: 2.4rem 2.6rem;
+	@include sm {
+		padding: 2.2rem 3rem 2.1rem;
+	}
+
+	&__block {
+		margin-top: 8rem;
+		@include sm {
+			margin-top: 6.6rem;
+		}
+	}
 
 	&__info {
 		margin-bottom: 3rem;
+		@include sm {
+			margin-right: 6.6rem;
+			margin-bottom: 0;
+		}
 	}
 	&__thumb {
 		margin-right: 5rem;
+
+		@include sm {
+			margin-right: 1.8rem;
+		}
 	}
 	&__img {
-		height: 9rem;
+		height: 8.7rem;
 	}
 }
 
@@ -23,9 +41,16 @@
 	display: inline-block;
 	&-block {
 		overflow-x: scroll;
+		@include sm {
+			overflow-x: auto;
+			margin-bottom: 10rem;
+		}
 	}
 	&-wrap {
 		width: 70rem;
+		@include sm {
+			width: 100%;
+		}
 	}
 	&-img {
 		position: relative;
@@ -45,10 +70,22 @@
 	&-title {
 		margin-bottom: $default-size;
 		text-decoration: underline;
+		@include sm {
+			margin-bottom: 1.2rem;
+		}
 	}
 	&-text {
 		margin-bottom: 3rem;
 		opacity: .8;
+		@include sm {
+			margin-bottom: $default-size;
+		}
+	}
+
+	&-basket {
+		@include sm {
+			margin-left: 2rem;
+		}
 	}
 }
 

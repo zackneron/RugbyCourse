@@ -1,13 +1,13 @@
 @import 'variables';
 .btn {
 	color: var(--secondary);
-	padding: 8px 2.4rem 7px;
+	padding: .8rem 2.4rem .7rem;
     border-top-left-radius: 2.8rem;
     border-top-right-radius: 2.8rem;
     border-bottom-left-radius: 2.8rem;
     border-bottom-right-radius: 2.8rem;
     line-height: 1rem;
-    transition: all 3s linear;
+    transition: all .3s linear;
 
     &:hover,
     &:focus {
@@ -41,24 +41,32 @@
 		&:hover,
 		&:focus {
 			background: var(--btn-primary);
+			border-color: transparent;
 		}
 	}
 	&-secondary-white {
 		color: var(--primary);
 		background: var(--secondary);
+		&:hover,
+		&:focus {
+			background: var(--btn-primary);
+		}
 	}
 
 	&--custom {
-		padding-top: 19px;
-	    padding-bottom: 18px;
-	    font-size: 16px;
-	    line-height: 19px;
+		padding-top: 1.9rem;
+	    padding-bottom: 1.8rem;
+	    font-size: 1.6rem;
+	    line-height: 1.9rem;
 	}
 
+	&--md {
+	    min-width: 15.6rem;
+	}
 	&--lg {
-	    min-width: 187px;
+	    min-width: 18.7rem;
 	}
 	&--xl {
-	    min-width: 246px;
+	    min-width: 24.6rem;
 	}
 }

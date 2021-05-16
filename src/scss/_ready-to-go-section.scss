@@ -3,12 +3,21 @@
 	background-position: top;
 	background-size: cover;
 	min-height: 29.2rem;
+	margin-top: 7.9rem;
+	@include sm {
+		background-position: center;
+		margin-top: 6.8rem;
+		padding-top: 7.9rem;
+    	padding-bottom: 8.3rem;
+	}
 
 	&__block {
 		width: 33.5rem;
 		margin: 0 auto;
-		@include md {
+		text-align: center;
+		@include sm {
 			width: 100%;
+			text-align: left;
 		}
 	}
 
@@ -17,9 +26,25 @@
 		margin-bottom: 3.8rem;
 		font-family: $Work-Sans;
 		font-size: 1.8rem;
+		@include sm {
+			font-size: 2.2rem;
+			margin-top: 1.3rem;
+			margin-bottom: 0;
+		}
+	}
+
+	&__content {
+		margin-top: 4.7rem;
+		@include sm {
+			margin-top: 0;
+			width: 37.2rem;
+		}
 	}
 
 	&__cta {
 		margin-bottom: 5.5rem;
+		@include sm {
+			margin-bottom: 0;
+		}
 	}
 }

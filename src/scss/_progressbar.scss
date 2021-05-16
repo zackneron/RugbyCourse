@@ -1,0 +1,43 @@
+.progress__block {
+	display: block;
+    padding: 1rem 0;
+    background: var(--primary);
+}
+
+.progress__complete-level {
+	display: block;
+    margin-bottom: 1.1rem;
+    padding: 0 1rem;
+}
+
+progress {
+  border: none;
+  height: .8rem;
+  background: $white-blue;
+  border-radius: 2.95rem;
+}
+
+progress {
+  color: $white;
+  border-radius: 2.95rem;
+}
+
+progress::-webkit-progress-value {
+  background: var(--btn-primary);
+  border-radius: 2.95rem;
+}
+
+progress::-moz-progress-bar {
+  background: $white-blue;
+  border-radius: 2.95rem;
+}
+
+progress::-webkit-progress-value {
+  background: var(--btn-primary);
+  border-radius: 2.95rem;
+}
+
+progress::-webkit-progress-bar {
+  background: $white-blue;
+  border-radius: 2.95rem;
+}

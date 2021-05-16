@@ -1,0 +1,6 @@
+.snapshot {
+	margin-top: 7.2rem;
+	@include sm {
+		margin-top: 8.8rem;
+	}
+}

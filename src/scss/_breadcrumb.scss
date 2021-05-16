@@ -1,10 +1,20 @@
 .breadcrumb {
-	@include md {
+	@include sm {
+		border-bottom: 1px solid rgba($white, .4);
+    	padding-bottom: 29.5px;
 		margin-top: 7rem;
+		margin-bottom: 0;
+	}
+
+	&__block {
+		@include sm {
+			margin-top: 7.6rem;
+		}
 	}
 	&__item {
 		display: inline-block;
 		position: relative;
+		letter-spacing: .72px;
 		&:not(:first-child) {
 			margin-left: 2.5rem;
 		}

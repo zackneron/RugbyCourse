@@ -1,0 +1,20 @@
+.u-text-link {
+    color:$text-links;
+    text-decoration: underline;
+
+    &:hover {
+        color: var(--secondary); 
+    }
+}
+.u-text-o-5 {
+    color: var(--secondary-gray);
+    opacity: .5;
+}
+.u-text-o-6 {
+    color: var(--secondary);
+    opacity: .6;
+}
+.u-text-o-8 {
+    color: var(--secondary);
+    opacity: .8;
+}

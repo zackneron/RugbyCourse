@@ -1,0 +1,38 @@
+.footer {
+	background: var(--secondary);
+	color: $footer-text-color;
+
+	&__container {
+		text-align: center;
+		@include sm {
+			text-align: left;
+			padding: 6rem 0 6.1rem;
+		}
+	}
+	&__logo {
+		margin-top: 3.2rem;
+		margin-bottom: 2.9rem;
+		@include sm {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: 4.1rem;
+		}
+	}
+	&__logo-img {
+		height: 9rem;
+		@include sm {
+			height: 11.5rem;
+		}
+	}
+
+	&__copyright {
+		padding: 2.3rem 0 2.2rem;
+		background: var(--primary);
+		color: var(--secondary);
+		font-size: 1.2rem;
+		line-height: 14px;
+		@include sm {
+			padding: 1.8rem 0 1.9rem;
+		}
+	}
+}

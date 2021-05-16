@@ -1,5 +1,43 @@
 .cart {
+	@include sm {
+		padding-bottom: 5.85rem;
+		border-bottom: 1px solid rgba($white, .4);
+	}
+	&__block {
+		margin-top: 5rem;
+		margin-bottom: 5.5rem;
+		@include sm {
+			margin-top: 5.85rem;
+			margin-bottom: 3.15rem;
+		}
+	}
+
+	&__thumb {
+		@include sm {
+			margin-right: 3.2rem;
+		}
+	}
+
 	&__img {
 		height: 10.4rem;
+		@include sm {
+			height: 15.7rem;
+		}
+	}
+
+	&__add-cart {
+		&__price {
+			margin-bottom: 1.5rem;
+			@include sm {
+				margin-bottom: 0;
+				margin-right: 2.2rem;
+			}
+		}
+		.btn {
+			@include sm {
+				min-width: 15.6rem;
+			padding: 1rem;
+			}
+		}
 	}
 }

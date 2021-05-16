@@ -27,14 +27,18 @@ body {
     background: var(--primary-bg);
     font-size: $default-size;
     color: var(--secondary);
+    letter-spacing: 0;
+    line-height: 16px;
 }
 
 a,
 button {
     outline: none;
+    transition: color .2s linear;
     &:hover,
     &:focus {
         outline: none;
+        color: var(--primary-orange)
     }
 }
 

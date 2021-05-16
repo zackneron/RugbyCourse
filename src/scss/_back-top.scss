@@ -5,4 +5,8 @@
 	width: 5.4rem;
 	margin: 4rem auto 4.3rem;
 	display: block;
+
+	@include sm {
+		display: none;
+	}
 }

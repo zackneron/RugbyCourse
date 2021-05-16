@@ -1,0 +1,24 @@
+.tooltip {
+	&-inner {
+		background: $white;
+		color: var(--primary);
+		padding: 1.6rem;
+		font-size: 1.2rem;
+		line-height: 16.4px;
+	    box-shadow: 0 .5rem .5rem rgba(24,24,24,0.4);
+	    position: relative;
+	}
+}
+
+.tooltip.bs-tooltip-end[data-popper-placement=right] .tooltip-arrow::before, 
+.tooltip.bs-tooltip-right .tooltip-arrow::before {
+    margin-top: -5px;
+    border-width: 1rem 1rem 1rem 0;
+    border-right-color:$white;
+}
+.tooltip.bs-tooltip-auto[x-placement^=top] .tooltip-arrow::before, 
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    margin-left: -5px;
+    border-width: 1rem 1rem 0;
+    border-top-color:$white;
+}
